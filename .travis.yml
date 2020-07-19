@@ -2,14 +2,6 @@ language: python
 python:
   - 3.8
 
-install:
-  - pip3 install pipenv
-  - pip3 install boto3
-  - pip3 install flask
-
-before_install:
-  - python --version
-
 branches:
   only:
     - master
