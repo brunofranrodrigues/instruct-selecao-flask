@@ -1,0 +1,8 @@
+language: python
+python:
+  - 3.8
+before_install:
+  - python --version
+branches:
+  only:
+    - master
