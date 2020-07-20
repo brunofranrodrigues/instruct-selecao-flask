@@ -21,6 +21,6 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: .travis/deploy.sh
+  script: ssh -p22 161.35.99.229 deploy.sh 
   on:
     all_branches: true
