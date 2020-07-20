@@ -7,6 +7,12 @@ Faça o upload dos scripts para o servidor.
 
 **Ps:** Se o ambiente for na AWS deixe a variavel como localhost.
 
+### Versão do SO
+Distributor ID: Ubuntu
+Description:    Ubuntu 18.04.4 LTS
+Release:        18.04
+Codename:       bionic
+
 ### Script de recovery do SO
 O script foi criado com Shell Script.
 
