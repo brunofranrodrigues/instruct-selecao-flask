@@ -18,10 +18,7 @@ before_install:
   - echo -e "Host 161.35.99.229\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 install:
-        - pip3 install pipenv
-        - pip3 install boto3
-        - pip3 install flask
-        - pip3 install pytest
+        - 
 script:
         -
 deploy:
