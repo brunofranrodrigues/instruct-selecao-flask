@@ -1,16 +1,16 @@
 language: generic
 addons:
-  ssh_known_hosts: 64.227.26.21
+  ssh_known_hosts: 157.245.143.60
 branches:
   only:
   - master
 before_install:
 - openssl aes-256-cbc -K $encrypted_0ddd2445e49f_key -iv $encrypted_0ddd2445e49f_iv
-  -in travis_rsa.enc -out /tmp/travis_rsa -d
+  -in travis_rsa.enc -out travis_rsa -d
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/travis_rsa
 - ssh-add /tmp/travis_rsa
-- echo -e "Host 64.227.26.21\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- echo -e "Host 157.245.143.60\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 install:
 - 
 script:
@@ -18,6 +18,6 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: ssh -p22 64.227.26.21 deploy.sh
+  script: ssh -p22 157.245.143.60 deploy.sh
   on:
     all_branches: true
