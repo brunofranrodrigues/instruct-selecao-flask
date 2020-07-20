@@ -1,11 +1,11 @@
 # Início do lab
 Faça o upload dos scripts para o servidor.
 
-**Ps:** Se o ambiente for na AWS deixe a variavel como localhost.
-
 **Ps:** Em ambos os scripts têm uma variável chamada “IP”.
 
 **Ps:** Esta variável deve ser o ip da maquina que ira ser utilizada como teste.
+
+**Ps:** Se o ambiente for na AWS deixe a variavel como localhost.
 
 ### Script de recovery do SO
 O script foi criado com Shell Script.
