@@ -15,7 +15,7 @@ before_install:
   - eval "$(ssh-agent -s)"
   - chmod 600 /tmp/travis_rsa
   - ssh-add /tmp/deploy_rsa
-  - echo -e "Host ${DEPLOY_HOST}\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - echo -e "Host 161.35.99.229\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 install:
         - pip3 install pipenv
