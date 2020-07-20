@@ -55,12 +55,12 @@ main_loopy () {
 		apt install -y python3 python3-pip unzip gunicorn s3fs ruby2.5 ruby2.5-dev
 
 		#Instalação do framework e dos modulos
-		pip3 install pipenv
-		pip3 install boto3
-		pip3 install flask
-		pip3 install pytest
+		sudo pip3 install pipenv
+		sudo pip3 install boto3
+		sudo pip3 install flask
+		sudo pip3 install pytest
 
-		pipenv --python 3 install --system --deploy
+		sudo pipenv --python 3 install --system --deploy
 		
 		gem install travis --no-document
 		
@@ -172,9 +172,9 @@ MINIO_SECRET_KEY="miniostorage"" > /etc/default/minio
 		S3_ACCESS_KEY="minio"
 		S3_SECRET_KEY="miniostorage"
 
-		export S3_URL;
-		export S3_ACCESS_KEY;
-		export S3_SECRET_KEY;
+		export $S3_URL;
+		export $S3_ACCESS_KEY;
+		export $S3_SECRET_KEY;
 
 		cd /opt/instruct-selecao-flask
 		
@@ -202,12 +202,12 @@ MINIO_SECRET_KEY="miniostorage"" > /etc/default/minio
 		#Instalação dos pacotes necessario para rodar o  app
 		apt install -y python3 python3-pip unzip gunicorn s3fs ruby2.5 ruby2.5-dev
 		#Instalação do framework e dos modulos
-		pip3 install pipenv
-		pip3 install boto3
-		pip3 install flask
-		pip3 install pytest
+		sudo pip3 install pipenv
+		sudo pip3 install boto3
+		sudo pip3 install flask
+		sudo pip3 install pytest
 
-		pipenv --python 3 install --system --deploy
+		sudo pipenv --python 3 install --system --deploy
 		
 		gem install travis --no-document
 		
@@ -308,9 +308,9 @@ MINIO_SECRET_KEY="miniostorage"" > /etc/default/minio
 		S3_ACCESS_KEY="minio"
 		S3_SECRET_KEY="miniostorage"
 
-		export S3_URL;
-		export S3_ACCESS_KEY;
-		export S3_SECRET_KEY;
+		export $S3_URL;
+		export $S3_ACCESS_KEY;
+		export $S3_SECRET_KEY;
 
 		cd /opt/instruct-selecao-flask
 		
