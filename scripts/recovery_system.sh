@@ -12,7 +12,7 @@
 ##############################################################################
 
 INPUTVALUE="";
-IP="157.245.143.60";
+IP="localhost";
 
 df_Info () {
 	clear;
@@ -52,7 +52,7 @@ main_loopy () {
 		apt-get update
 
 		#Instalação dos pacotes necessario para rodar o  app
-		apt install -y python3 python3-pip unzip gunicorn s3fs ruby2.7 ruby2.7-dev
+		apt install -y python3 python3-pip unzip gunicorn s3fs ruby2.5 ruby2.5-dev
 
 		#Instalação do framework e dos modulos
 		pip3 install pipenv
@@ -200,7 +200,7 @@ MINIO_SECRET_KEY="miniostorage"" > /etc/default/minio
 		apt-get update
 
 		#Instalação dos pacotes necessario para rodar o  app
-		apt install -y python3 python3-pip unzip gunicorn s3fs ruby2.7 ruby2.7-dev
+		apt install -y python3 python3-pip unzip gunicorn s3fs ruby2.5 ruby2.5-dev
 		#Instalação do framework e dos modulos
 		pip3 install pipenv
 		pip3 install boto3

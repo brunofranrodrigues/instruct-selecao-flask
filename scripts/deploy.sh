@@ -15,7 +15,7 @@ eval "$(ssh-agent -s)" # Start ssh-agent cache
 chmod 600 /home/travis/.travis/travis_rsa # Allow read access to the private key
 ssh-add /home/travis/.travis/travis_rsa # Add the private key to SSH
 
-IP="157.245.143.60";
+IP="localhost";
 
 pid=`pgrep -x gunicorn | tail -1`
 SERVICE="gunicorn";
