@@ -5,6 +5,12 @@ python:
 
 addons:
   ssh_known_hosts: 64.227.18.245
+  
+install:
+        - pip3 install pipenv
+        - pip3 install boto3
+        - pip3 install flask
+        - pip3 install pytest
 
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_137f45644142_key -iv $encrypted_137f45644142_iv
