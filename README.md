@@ -1,6 +1,9 @@
 # Início do lab
 Faça o upload dos scripts para o servidor.
 
+**Ps:** Em ambos os scripts têm uma variável chamada “IP”
+**Ps:** Esta variável deve ser o ip da maquina que ira ser utilizada como teste
+
 ### Script de recovery do SO
 O script foi criado com Shell Script.
 
