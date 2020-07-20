@@ -177,9 +177,9 @@ MINIO_SECRET_KEY="miniostorage"" > /etc/default/minio
 		S3_ACCESS_KEY="minio"
 		S3_SECRET_KEY="miniostorage"
 
-		export $S3_URL;
-		export $S3_ACCESS_KEY;
-		export $S3_SECRET_KEY;
+		export S3_URL;
+		export S3_ACCESS_KEY;
+		export S3_SECRET_KEY;
 
 		cd /opt/instruct-selecao-flask
 		
@@ -317,9 +317,9 @@ MINIO_SECRET_KEY="miniostorage"" > /etc/default/minio
 		S3_ACCESS_KEY="minio"
 		S3_SECRET_KEY="miniostorage"
 
-		export $S3_URL;
-		export $S3_ACCESS_KEY;
-		export $S3_SECRET_KEY;
+		export S3_URL;
+		export S3_ACCESS_KEY;
+		export S3_SECRET_KEY;
 
 		cd /opt/instruct-selecao-flask
 		
