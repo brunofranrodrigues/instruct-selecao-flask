@@ -9,11 +9,12 @@ Basicamente funciona via menu ou de forma expressa.
 Basta dar permissão de execução
 ```bash
 chmod 755 recovery_system.sh
+```
 
 E chamar conforme o exemplo abaixo:
 ```bash
 ./ recovery_system.sh
-
+```
 Se quiser apenas seguir com o recovery escolha a opção número 4.
 
 #Exemplo:
@@ -37,9 +38,11 @@ Basta dar permissão de execução
 
 ```bash
 chmod 755 deploy.sh
+```
 
 E copiar para um diretório que esteja no path.
 ```bash
 cp deploy.sh /usr/local/bin
+```
 
 Ele precisa estar acessível para o usuário travis.
