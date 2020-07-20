@@ -1,17 +1,30 @@
-# Início do lab
+# Início do ambiente de teste
+Neste repositório está hospedado todos os arquivos utilizados para simular o ambiente de CI utilizando a plataforma Trevis-CI.
+
+## Sobre o processo de desenvolvimento
+Os scripts de deploy e de recovery foram montados apartir de exemplos encontrados na documentação do próprio Trevis-CI.
+
+A linguagem utilizada foi o shell-script pois possuo mais habilidade com ela.
+
+
 Faça o upload dos scripts para o servidor.
 
-**Ps:** Em ambos os scripts têm uma variável chamada “IP”.
+### Segurança:
+Foi criado um usuario no SO especifico para a plataforma trevis-ci.
 
-**Ps:** Esta variável deve ser o ip da maquina que ira ser utilizada como teste.
+Segui a referencia da documentação.
+https://docs.travis-ci.com/user/private-dependencies/
 
-**Ps:** Se o ambiente for na AWS deixe a variavel como localhost.
+A chave ssh utilizada foi encryptada e adicionada no repo do github.
+
+**Ps:**
+Em ambos os scripts têm uma variável chamada “IP”.
+Esta variável deve ser o ip da maquina que ira ser utilizada como teste.
+Caso o ambiente esteja hospedado na AWS deixe a variavel como localhost.
 
 ### Versão do SO
-Distributor ID: Ubuntu
-Description:    Ubuntu 18.04.4 LTS
-Release:        18.04
-Codename:       bionic
+Description:    Ubuntu 18.04.4 LTS.
+
 
 ### Script de recovery do SO
 O script foi criado com Shell Script.
@@ -29,9 +42,10 @@ E chamar conforme o exemplo abaixo:
 ```
 Se quiser apenas seguir com o recovery escolha a opção número 4.
 
-#Exemplo:
+### Exemplo:
+O teste foi feito com o usuario root executando o recovery.
 
- Recovery System
+Recovery System
 
 ```bash
  Escolha as opcoes abaixo:
