@@ -1,50 +1,45 @@
-# MinIO Uploader
+# Início do lab
+Faça o upload dos scripts para o servidor.
 
-O `MinIO Uploader` é endpoint que permite o envio de arquivos para o [MinIO](https://min.io/) sem a necessidade de autenticação.
+### Script de recovery do SO
+O script foi criado com Shell Script.
 
-## Execução
+Basicamente funciona via menu ou de forma expressa.
 
-Este projeto depende do [MinIO](https://min.io/), por isso é necessário subir uma instância dele no seu ambiente para que a aplicação funcione corretamente.
+Basta dar permissão de execução
+```bash
+chmod 755 recovery_system.sh
 
-Para executar o projeto é necessário instalar algumas dependências, configurar algumas variáveis de ambiente e executar o servidor `Gunicorn`. Para isso, utilize os seguintes comandos:
+E chamar conforme o exemplo abaixo:
+```bash
+./ recovery_system.sh
 
-### Dependências
+Se quiser apenas seguir com o recovery escolha a opção número 4.
+
+#Exemplo:
+
+ Recovery System
+
+
+ Escolha as opcoes abaixo:
+
+ Digite "1" para instalar os requisitos do app.
+ Digite "2" para criar o bucket.
+ Digite "3" para efetuar o deploy do app.
+ Digite "4" para recovery completo de modo expresso.
+
+ Digite "5" Para sair.
+
+ (Case Sensitive) -->
+
+### Script de deploy.
+Basta dar permissão de execução
 
 ```bash
-apt update
-apt install -y python3 python3-pip
-pip3 install pipenv
-pipenv --python 3 install --system --deploy
-```
+chmod 755 deploy.sh
 
-### Variáveis de ambiente
-
+E copiar para um diretório que esteja no path.
 ```bash
-export S3_URL=http://MINIO_URL
-export S3_ACCESS_KEY=MINIO_KEY
-export S3_SECRET_KEY=MINIO_SECRET
-```
+cp deploy.sh /usr/local/bin
 
-**Ps:** Substitua as variáveis com os valores do seu ambiente.
-
-### Servidor
-
-Para executar a aplicação, utilize o comando:
-
-```bash
-gunicorn --bind 0.0.0.0:5000 wsgi:app
-```
-
-A aplicação subirá na porta `5000/TCP`.
-
-Para testar o serviço, utilize o endereço: `http://URL:5000` e a mensagem `"Please, send a post request with file."` deverá ser exibida.
-
-## Enviando arquivos
-
-Para enviar arquivos para o [MinIO](https://min.io/) através do serviço, utilize o seguinte comando `curl`:
-
-```bash
-curl -X POST -F "file=@filename" http://URL/minio-upload/<bucket>/<filename>
-```
-
-**PS:** Substitua o `filename` pelo caminho absoluto do arquivo e o `<bucket>` pelo nome do Bucket criado no [MinIO](https://min.io/).
+Ele precisa estar acessível para o usuário travis.
