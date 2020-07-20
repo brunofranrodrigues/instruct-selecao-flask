@@ -1,6 +1,6 @@
 language: generic
 addons:
-  ssh_known_hosts: 157.245.143.60
+  ssh_known_hosts: 3.17.200.0
 branches:
   only:
   - master
@@ -10,7 +10,7 @@ before_install:
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/travis_rsa
 - ssh-add /tmp/travis_rsa
-- echo -e "Host 157.245.143.60\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- echo -e "Host 3.17.200.0\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 install:
 - 
 script:
@@ -18,6 +18,6 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: ssh -p22 157.245.143.60 deploy.sh
+  script: ssh -p22 3.17.200.0 deploy.sh
   on:
     all_branches: true
