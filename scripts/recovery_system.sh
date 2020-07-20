@@ -167,6 +167,11 @@ MINIO_SECRET_KEY="miniostorage"" > /etc/default/minio
 
 		fi
 
+		cd /opt/instruct-selecao-flask/
+
+                sudo pipenv --python 3 install --system --deploy
+
+
 		#Variaveis de ambiente
 		S3_URL="http://$IP:9000/minio/teste/"
 		S3_ACCESS_KEY="minio"
@@ -302,6 +307,10 @@ MINIO_SECRET_KEY="miniostorage"" > /etc/default/minio
 			chown travis.travis -R /opt/instruct-selecao-flask/
 
 		fi
+		
+		cd /opt/instruct-selecao-flask/
+
+		sudo pipenv --python 3 install --system --deploy
 
 		#Variaveis de ambiente
 		S3_URL="http://$IP:9000/minio/teste/"
