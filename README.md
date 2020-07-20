@@ -25,7 +25,7 @@ Se quiser apenas seguir com o recovery escolha a opção número 4.
 
  Recovery System
 
-
+```bash
  Escolha as opcoes abaixo:
 
  Digite "1" para instalar os requisitos do app.
@@ -36,6 +36,7 @@ Se quiser apenas seguir com o recovery escolha a opção número 4.
  Digite "5" Para sair.
 
  (Case Sensitive) -->
+```
 
 ### Script de deploy.
 Basta dar permissão de execução
