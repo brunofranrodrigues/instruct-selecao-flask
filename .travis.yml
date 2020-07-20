@@ -1,7 +1,4 @@
-language: python
-
-python:
-  - 3.8
+language: generic
 
 addons:
   ssh_known_hosts: 161.35.99.229
@@ -18,7 +15,7 @@ before_install:
   - echo -e "Host 161.35.99.229\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 install:
-        - 
+        -
 script:
         -
 deploy:
